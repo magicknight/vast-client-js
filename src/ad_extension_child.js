@@ -3,5 +3,15 @@ export class AdExtensionChild {
     this.name = null;
     this.value = null;
     this.attributes = {};
+    this.children = [];
+  }
+
+  isEmpty() {
+    return !(
+      this.name ||
+      this.value ||
+      Object.keys(this.attributes).length > 0 ||
+      this.children.length > 0
+    );
   }
 }

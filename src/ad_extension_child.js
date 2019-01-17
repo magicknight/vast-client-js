@@ -7,11 +7,11 @@ export class AdExtensionChild {
   }
 
   isEmpty() {
-    return !(
-      this.name ||
-      this.value ||
-      Object.keys(this.attributes).length > 0 ||
-      this.children.length > 0
+    return (
+      this.name === null &&
+      this.value === null &&
+      Object.keys(this.attributes).length === 0 &&
+      this.children.length === 0
     );
   }
 }

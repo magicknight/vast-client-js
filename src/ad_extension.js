@@ -4,8 +4,8 @@ export class AdExtension {
     this.children = [];
   }
   isEmpty() {
-    return !(
-      Object.keys(this.attributes).length > 0 || this.children.length > 0
+    return (
+      Object.keys(this.attributes).length === 0 && this.children.length === 0
     );
   }
 }

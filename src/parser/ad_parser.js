@@ -254,7 +254,7 @@ function parseExtension(extNode, isChild = false) {
   const extNodeAttrs = extNode.attributes;
   const childNodes = extNode.childNodes;
 
-  // Only childs have a name an values
+  // Only children have a name an values
   if (isChild) {
     ext = new AdExtensionChild();
     const txt = parserUtils.parseNodeText(extNode);
@@ -278,7 +278,7 @@ function parseExtension(extNode, isChild = false) {
     }
   }
 
-  // Parse all childrens
+  // Parse all children
   for (let childNodeKey in childNodes) {
     const parsedChild = parseExtension(childNodes[childNodeKey], true);
     if (parsedChild) {

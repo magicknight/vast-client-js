@@ -1228,6 +1228,7 @@ describe('VASTParser', function() {
     });
 
     it('validate first extension', () => {
+      ad.extensions[0].should.not.have.any.keys('name', 'value');
       ad.extensions[0].attributes['type'].should.eql('Pricing');
       ad.extensions[0].children.should.have.length(2);
       const prices = ad.extensions[0].children[0];
@@ -1249,6 +1250,7 @@ describe('VASTParser', function() {
     });
 
     it('validate second extension', () => {
+      ad.extensions[1].should.not.have.any.keys('name', 'value');
       ad.extensions[1].attributes['type'].should.eql('OverlyNestedExtention');
       ad.extensions[1].children.should.have.length(1);
       const greatFather = ad.extensions[1].children[0];
